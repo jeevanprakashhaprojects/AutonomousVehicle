@@ -1,0 +1,15 @@
+<launch>
+   <!-- Map Server Node -->
+   <arg name="map_file" default="$(find navbot_description)/maps/mymap.yaml"/>
+   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" respawn="false" output="screen">
+     <param name="frame_id" value="map" />
+   </node>
+
+   <!-- AMCL Node -->
+   <include file="$(find navbot_description)/launch/amcl.launch"/>
+
+   <!-- Move Base Node -->
+   <include file="$(find navbot_description)/launch/move_base.launch"/>
+</launch>
+
+

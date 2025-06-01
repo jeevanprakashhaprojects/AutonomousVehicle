@@ -1,0 +1,12 @@
+<launch>
+  <node name="move_base" pkg="move_base" type="move_base" respawn="false" output="screen">
+    <rosparam file="$(find navbot_description)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find navbot_description)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find navbot_description)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find navbot_description)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find navbot_description)/config/base_local_planner_params.yaml" command="load" />
+      <rosparam file="$(find navbot_description)/config/teb_local_planner_params.yaml" command="load" ns="move_base/TebLocalPlannerROS" />
+
+  </node>
+</launch>
+

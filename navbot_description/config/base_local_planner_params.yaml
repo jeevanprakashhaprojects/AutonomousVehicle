@@ -1,0 +1,36 @@
+DWAPlannerROS:
+  # Robot configuration parameters
+  max_vel_x: 0.5
+  min_vel_x: 0.1
+  max_vel_theta: 1.0
+  min_in_place_vel_theta: 0.4
+  acc_lim_x: 0.5
+  acc_lim_theta: 0.8
+
+  # Goal tolerance parameters
+  yaw_goal_tolerance: 0.1  # Radians
+  xy_goal_tolerance: 0.2  # Meters
+
+  # Forward simulation parameters
+  sim_time: 2.0
+  vx_samples: 20
+  vy_samples: 0  # Set to 0 for differential drive robots
+  sim_granularity: 0.025
+  angular_sim_granularity: 0.025
+
+  # Scoring parameters
+  path_distance_bias: 32.0  # Weight for the path distance
+  goal_distance_bias: 24.0  # Weight for the goal distance
+  occdist_scale: 0.02  # Weight for the obstacle cost
+  forward_point_distance: 0.325  # Distance between the center of the robot and the point to consider for scoring
+  stop_time_buffer: 0.2
+  scaling_speed: 0.25  # The speed below which to scale the robot's footprint
+  max_scaling_factor: 0.2  # How much to scale the robot's footprint when at speed 0
+
+  # Oscillation prevention parameters
+  oscillation_reset_dist: 0.05  # How far the robot needs to move to reset oscillation flags
+
+  # Debugging
+  publish_traj_pc: true
+  publish_cost_grid_pc: true
+
