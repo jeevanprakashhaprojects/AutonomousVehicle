@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cab1769a-010d-44d2-8e6a-060b33ca91d9)# 🚗 Vehicle to Infrastructure Communication for Autonomous Navigation
+# 🚗 Vehicle to Infrastructure Communication for Autonomous Navigation
 
 This repository contains the complete implementation and documentation for my Bachelor's thesis project titled:
 
